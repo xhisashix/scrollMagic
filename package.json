@@ -1,0 +1,24 @@
+{
+  "name": "scrollmagic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"reload -b -d htdocs\" \"stylus -w stylus/style.styl -o htdocs/css\" \"pug pug --out htdocs --watch --pretty\"",
+    "reload": "reload -b -d htdocs",
+    "pug": "pug pug --out htdocs --watch pug/index.pug --pretty",
+    "stylus": "stylus -w stylus/style.styl -o htdocs/css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "stylus": "^0.54.8",
+    "pug-cli": "^1.0.0-alpha6",
+    "reload": "^3.0.5"
+  },
+  "dependencies": {
+    "pug": "^3.0.2"
+  }
+}
