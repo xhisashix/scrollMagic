@@ -2,16 +2,11 @@
 header
   height 80px
   background red
-  &.fixed
-    position fixed
-    top 0
-    left 0
 .section
   display flex
   flex-wrap wrap
   justify-content flex-start
   margin 0 auto
-  margin-top 60px
   max-width 980px
   width 100%
   .box
@@ -20,3 +15,15 @@ header
     width 200px
     height 200px
     background #eeeeee
+    opacity 0
+    transition 0.5s
+    transform translateY(15%) rotate(-45deg)
+    &:nth-child(odd)
+      transform translateY(-15%) rotate(45deg)
+    &.active
+      opacity 1
+      transform translateY(0)
+footer
+  margin-top 50px
+  height 300px
+  background #ddd
